@@ -1,0 +1,8 @@
+<a href="{% url 'post_list' %}">Click to go back home</a>
+
+
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="post-form">
+    <a href="{% url 'delete' post.id %}">delete</a>
+</form>

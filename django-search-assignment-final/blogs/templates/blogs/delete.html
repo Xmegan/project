@@ -1,0 +1,5 @@
+<a href="{% url 'post_list' %}">HOME</a>
+<form method="post">{% csrf_token %}
+    <p>Are you sure you want to delete "{{ object.text }}"?</p>
+    <input type="submit" value="Confirm">
+</form>
