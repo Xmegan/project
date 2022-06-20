@@ -1,0 +1,17 @@
+setup:
+  addons:
+    - plan: heroku-assignment-491f
+      as: DATABASE
+  config:
+    POSTGRES_DB: ""
+    POSTGRES_USER: ""
+    POSTGRES_PASSWORD: ""
+    DATABASE_HOST: ""
+    DATABASE_PORT: ""
+build:
+  docker:
+    web: Dockerfile
+release:
+  image: web
+  command:
+    - ./scripts/release-tasks.sh
