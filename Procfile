@@ -1,1 +1,0 @@
-web: /bin/sh -c scripts/start_app.sh
