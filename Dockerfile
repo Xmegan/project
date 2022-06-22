@@ -6,4 +6,4 @@ COPY requirements.txt /usr/src/app/
 RUN pip install -r requirements.txt
 
 COPY . /usr/src/app/
-CMD scripts/start_app.sh
+CMD chmod +x scripts/start_app.sh; scripts/start_app.sh
