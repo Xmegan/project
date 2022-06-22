@@ -53,6 +53,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'mysite.urls'
+CSRF_TRUSTED_ORIGINS = ['https://*.herokuapp.com']
 
 TEMPLATES = [
     {
