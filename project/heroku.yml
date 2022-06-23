@@ -1,0 +1,13 @@
+setup:
+  addons:
+    - plan: heroku-postgresql:hobby-dev
+      as: DATABASE
+  config:
+    POSTGRES_DB: ""
+    POSTGRES_USER: ""
+    POSTGRES_PASSWORD: ""
+    DATABASE_HOST: ""
+    DATABASE_PORT: ""
+build:
+  docker:
+    web: Dockerfile

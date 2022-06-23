@@ -1,0 +1,17 @@
+{% extends 'blogs/base.html' %}
+<h2> Hello {{user.username}}!</h2>
+{% block content %}
+    {% for post in posts %}
+        <article class="post">
+            <time class="date">
+                {{ post.published_date }}
+            </time>
+            <h2><a href="">{{ post.title }}</a></h2>
+            {% comment %} <span><a href="{% url 'update' blog.id %}">edit</a></span>
+            <span><a href="{% url 'delete' blog.id %}">delete</a></span> {% endcomment %}
+            <p>{{ post.text|linebreaksbr }}</p>
+        </article>
+            {% comment %} <span><a href="{% url 'update' blog.id %}">edit</a></span>
+            <span><a href="{% url 'delete' blog.id %}">delete</a></span> {% endcomment %}
+    {% endfor %}
+{% endblock %}
